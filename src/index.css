@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.start-project {
+  text-align: center;
+  color: aliceblue;
+  background-color: black;
+}

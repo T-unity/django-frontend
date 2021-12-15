@@ -2,4 +2,4 @@
 
 `yarn`
 
-'npm i'
+`npm i`

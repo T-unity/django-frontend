@@ -7,8 +7,10 @@ const path: string = 'http://localhost:8000/api/tweet/';
 // );
 
 const getData = async () => {
-  const res = await fetch(path);
-  console.log(res.json());
+  // const res = await fetch(path);
+  const res = await (await fetch(path)).json();
+  console.log(res);
+  // console.log(res.json());
   // const { results } = await res.json();
   // console.log(results);
 }

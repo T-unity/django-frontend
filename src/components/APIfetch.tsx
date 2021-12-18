@@ -1,12 +1,14 @@
 import React, {useState, useEffect} from 'react'
 
-const APIfetch = () => {
+const APIfetch: React.FC = (props) => {
 
-  // const
+  const clickHandler = () => {
+    console.log('clicked')
+  }
 
   return (
     <>
-      <h1>hoge</h1>
+      <button onClick={clickHandler}>クリック</button>
     </>
   )
 }

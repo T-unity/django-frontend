@@ -1,10 +1,13 @@
 import React, {useState, useEffect} from 'react'
 
 const APIfetch = () => {
-  return (
-    <div>
 
-    </div>
+  // const
+
+  return (
+    <>
+      <h1>hoge</h1>
+    </>
   )
 }
 

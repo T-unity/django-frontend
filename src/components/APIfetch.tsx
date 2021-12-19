@@ -18,11 +18,16 @@ const APIfetch: React.FC = () => {
 
   return (
     <>
-      <ul>
-        {
-          posts.map(post => <li key={post.id}>{post.title}</li>)
-        }
-      </ul>
+      {
+        posts.map(post =>
+          <div className='post-wrapper' key={post.id}>
+            <span className='post-title'>タイトル</span>
+            <div>{post.title}</div>
+            <span className='post-title'>本文</span>
+            <div>{post.content}</div>
+          </div>
+        )
+      }
     </>
   )
 }

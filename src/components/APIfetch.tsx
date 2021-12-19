@@ -1,13 +1,28 @@
 import React, {useState, useEffect} from 'react'
 
-const APIfetch: React.FC = (props) => {
+const APIfetch: React.FC = () => {
 
-  const [count, setCount] = useState(0)
+  // オブジェクトの状態管理
+  const [posts, setPosts] = useState<any[]>([])
+
+  const path = 'http://localhost:8000/api/tweet/'
+
+  useEffect(() => {
+    // fetch('https://jsonplaceholder.typicode.com/posts', {method: 'GET'})
+    fetch(path, {method: 'GET'})
+    .then(res => res.json())
+    .then(data => {
+      setPosts(data)
+    })
+  }, [])
 
   return (
     <>
-      <button onClick={ () => {setCount(prevCount=>prevCount+1); setCount(prevCount=>prevCount+1);} }>クリック</button>
-      <p>{count}</p>
+      <ul>
+        {
+          posts.map(post => <li key={post.id}>{post.title}</li>)
+        }
+      </ul>
     </>
   )
 }

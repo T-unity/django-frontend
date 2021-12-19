@@ -6,7 +6,7 @@ const APIfetch: React.FC = (props) => {
 
   return (
     <>
-      <button onClick={ () => setCount(count+1) }>クリック</button>
+      <button onClick={ () => {setCount(prevCount=>prevCount+1); setCount(prevCount=>prevCount+1);} }>クリック</button>
       <p>{count}</p>
     </>
   )

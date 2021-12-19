@@ -4,9 +4,9 @@ import './index.css';
 
 function App() {
   return (
-    <div className="start-project">
+    <>
       <APIfetch/>
-    </div>
+    </>
   );
 }
 

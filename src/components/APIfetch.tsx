@@ -2,13 +2,12 @@ import React, {useState, useEffect} from 'react'
 
 const APIfetch: React.FC = (props) => {
 
-  const clickHandler = () => {
-    console.log('clicked')
-  }
+  const [count, setCount] = useState(0)
 
   return (
     <>
-      <button onClick={clickHandler}>クリック</button>
+      <button onClick={ () => setCount(count+1) }>クリック</button>
+      <p>{count}</p>
     </>
   )
 }
